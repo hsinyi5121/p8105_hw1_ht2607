@@ -36,11 +36,11 @@ the pattern of this scatterpoint is like zigzag line shape
 # Question 2
 
 ```{r}
-x = rnorm(10)
-logical = x > 0
-logical
+df = data.frame(
+x = rnorm(10),
+logical = x > 0,
 character = c("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten")
-character
+)
 ```
 
 
