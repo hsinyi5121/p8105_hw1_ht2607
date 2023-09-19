@@ -37,6 +37,8 @@ the pattern of this scatterpoint is like zigzag line shape
 
 ```{r}
 x = rnorm(10)
+logical = x > 0
+logical
 ```
 
 
