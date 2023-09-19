@@ -28,7 +28,15 @@ plot_df = tibble(
   y = early_january_weather$temp
 )
 ggplot(plot_df, aes(x = x, y = y), color= humid)+geom_point()
+ggsave("plot_df.pdf")
 ```
 
 the pattern of this scatterpoint is like zigzag line shape
+
+# Question 2
+
+```{r}
+x = rnorm(10)
+```
+
 
