@@ -47,7 +47,7 @@ df = tibble(
 x = rnorm(10),
 logical = x > 0,
 character = c("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"), factor)
-
 ```
+
 
 
