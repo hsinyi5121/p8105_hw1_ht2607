@@ -15,6 +15,9 @@ data("early_january_weather")
 nrow(early_january_weather)
 ncol(early_january_weather)
 mean(early_january_weather$temp)
+library(tidyverse)
+mean(pull(var = temp, early_january_weather))
+
 ```
 
 the variables in this dataset, are origin, year, month, day, hour, temp, dewp, humid, wind_dir, wind_speed, wind_gust, precip, pressure, visib, and time_hour. 
@@ -40,10 +43,11 @@ factor = c("high", "high", "high", "median", "median", "median", "low", "low", "
 factor = as.factor(factor)
 class(factor)
 factor
-df = data.frame(
+df = tibble(
 x = rnorm(10),
 logical = x > 0,
 character = c("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"), factor)
+
 ```
 
 
