@@ -34,7 +34,7 @@ ggplot(plot_df, aes(x = x, y = y), color= humid)+geom_point()
 ggsave("plot_df.pdf")
 ```
 
-the pattern of this scatterpoint is like zigzag line shape
+the pattern of this scatterpoint is like zigzag line shape, we can see that there is a change in the dataset throughout the day
 
 # Question 2
 
