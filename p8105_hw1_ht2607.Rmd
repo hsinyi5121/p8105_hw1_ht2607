@@ -17,7 +17,6 @@ ncol(early_january_weather)
 mean(early_january_weather$temp)
 library(tidyverse)
 mean(pull(var = temp, early_january_weather))
-
 ```
 
 the variables in this dataset, are origin, year, month, day, hour, temp, dewp, humid, wind_dir, wind_speed, wind_gust, precip, pressure, visib, and time_hour. 
@@ -39,6 +38,7 @@ the pattern of this scatterpoint is like zigzag line shape, we can see that ther
 # Question 2
 
 ```{r}
+library(tidyverse)
 factor = c("high", "high", "high", "median", "median", "median", "low", "low", "low", "low")
 factor = as.factor(factor)
 class(factor)
@@ -47,7 +47,19 @@ df = tibble(
 x = rnorm(10),
 logical = x > 0,
 character = c("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"), factor)
+mean(pull(var = x, df))
 ```
 
+Mean of a variable in a dataframe is 0.0188
 
+```{r}
+x = rnorm(10)
+logical_var = x > 0
+character_var = c("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten")
+factor_var <- factor(c("high", "high", "high", "median", "median", "median", "low", "low", "low", "low"))
+numeric_logical <- as.numeric(logical_var)
+numeric_character <- as.numeric(character_var)
+numeric_factor <- as.numeric(factor_var)
+```
 
+When writing a code chunk that applies the as.numeric function to the logical, character, and factor variables (please show this chunk but not the output), the result gave us a warning message indicate that NAs introduced by coercion. This means that the factor variables cannot be convert to numeric. Therefore we cannot take the mean since the variable is not numeric.
