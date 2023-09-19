@@ -36,11 +36,14 @@ the pattern of this scatterpoint is like zigzag line shape
 # Question 2
 
 ```{r}
+factor = c("high", "high", "high", "median", "median", "median", "low", "low", "low", "low")
+factor = as.factor(factor)
+class(factor)
+factor
 df = data.frame(
 x = rnorm(10),
 logical = x > 0,
-character = c("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten")
-)
+character = c("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"), factor)
 ```
 
 
