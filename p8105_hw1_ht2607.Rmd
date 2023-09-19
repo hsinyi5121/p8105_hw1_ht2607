@@ -39,6 +39,8 @@ the pattern of this scatterpoint is like zigzag line shape
 x = rnorm(10)
 logical = x > 0
 logical
+character = c("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten")
+character
 ```
 
 
