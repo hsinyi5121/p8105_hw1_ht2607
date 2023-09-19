@@ -20,3 +20,15 @@ mean(early_january_weather$temp)
 the variables in this dataset, are origin, year, month, day, hour, temp, dewp, humid, wind_dir, wind_speed, wind_gust, precip, pressure, visib, and time_hour. 
 the size of the dataset (using nrow and ncol) is nrow:358 and ncol:15
 the mean temperature is 39.58212
+
+```{r}
+library (tidyverse)
+plot_df = tibble(
+  x = early_january_weather$time_hour,
+  y = early_january_weather$temp
+)
+ggplot(plot_df, aes(x = x, y = y), color= humid)+geom_point()
+```
+
+the pattern of this scatterpoint is like zigzag line shape
+
